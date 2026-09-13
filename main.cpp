@@ -24,6 +24,10 @@ void transpile(std::string the_dialouge){
             else if (c == '\t' || c == '\n'){
                 continue;
             }
+            else if (c == ';'){
+                speach.uniqe_speakers.push_back(dialouge);
+                speach.speaker_dedictor(&dialouge);
+            }
             else{
                 dialouge.push_back(c);
             }
@@ -44,6 +48,9 @@ void transpile(std::string the_dialouge){
             else if (c == 'n'){
                 dialouge.push_back('\n');
             }
+            else if (c == ';'){
+                dialouge.push_back(c);
+            }
             else{
                 speach.add_error("unexpected error: non existent escaped character");
             }
@@ -59,11 +66,12 @@ void transpile(std::string the_dialouge){
     else{
         std::cout << print_string_as_array(speach.lines) << std::endl;
         std::cout << print_string_as_array(speach.speakers) << std::endl;
+        std::cout << vector_to_dict(speach.uniqe_speakers) << std::endl;
     }
 }
 
 
 int main(){
-    transpile("sekmek:my fav @@ goon \\karam:pp\\");
+    transpile("sekmek;my fav @; goon \\karam:pp\\");
     return 0;
 }

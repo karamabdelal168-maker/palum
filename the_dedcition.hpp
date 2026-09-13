@@ -13,6 +13,7 @@ class text {
       std::vector<std::string> lines;
       std::vector<std::string> speakers;
       std::vector<std::string> errors;
+      std::vector<std::string> uniqe_speakers;
       bool gone_wrong = false ;
       bool is_escaping = false;
  
