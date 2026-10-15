@@ -13,6 +13,7 @@ void text::add_error(std::string error){
 
 void text::speaker_dedictor(std::string* name){
     if (this -> is_looking_for_name == true){
+
         this -> speakers.push_back(*name);
         *name = "";
         this -> is_looking_for_name = false;
