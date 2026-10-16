@@ -2,13 +2,17 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include <map>
+#include <fstream>
 #include <string>
-#include <stack>
+#include <filesystem>
 #include "the_dedcition.hpp"
 #include "vector_to_string_array.hpp"
 
-void transpile(std::string the_dialouge, std::string name){
+void transpile(std::filesystem::path path){
+    std::ifstream read(path);
+    std::string the_dialouge;
+    getline(read,the_dialouge);
+    read.close();
     text speach;
     std::string dialouge;
     for (char c: the_dialouge){
@@ -71,6 +75,8 @@ void transpile(std::string the_dialouge, std::string name){
 
     }
 
+    std::string name = path.stem();
+
     std::string first_part;
     while (name.at(name.size() - 1) == ' '){
         name.pop_back();
@@ -105,8 +111,13 @@ void transpile(std::string the_dialouge, std::string name){
         }
     }
     else{
+        std::ofstream final_file(path.replace_extension(".gd"));
+        
+        final_file << first_part + SECOND_PART;
 
-        std::cout << first_part + SECOND_PART << std::endl;
+        final_file.close();
+
+        std::cout << "done" << std::endl;
     }
 
     
@@ -114,6 +125,9 @@ void transpile(std::string the_dialouge, std::string name){
 
 
 int main(){
-    transpile("sekmek;my fav @; goon \\karam;pp\\","ssssss");
+    std::string path;
+    std::cout << "File path: ";
+    std::cin >> path;
+    transpile(path);
     return 0;
 }
