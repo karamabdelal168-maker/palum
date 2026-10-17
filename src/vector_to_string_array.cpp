@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "vector_to_string_array.hpp"
+#include "../include/vector_to_string_array.hpp"
 
 std::string print_string_as_array(std::vector<std::string> x){
 

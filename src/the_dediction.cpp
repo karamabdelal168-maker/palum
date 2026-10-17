@@ -3,7 +3,7 @@
 #include <vector>
 #include <map>
 #include <stack>
-#include "the_dedcition.hpp"
+#include "../include/the_dedcition.hpp"
 
 
 void text::add_error(std::string error){
