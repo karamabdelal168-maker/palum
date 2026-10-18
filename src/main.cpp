@@ -11,7 +11,8 @@
 void transpile(std::filesystem::path path){
     std::ifstream read(path);
     std::string the_dialouge;
-    getline(read,the_dialouge);
+    std::string i;
+    while (getline(read,i)){the_dialouge = the_dialouge +i;}
     read.close();
     text speach;
     std::string dialouge;
