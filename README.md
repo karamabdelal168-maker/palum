@@ -33,7 +33,7 @@ mark:
 ```
 
 | ; | Used to make a new speaker and make the speaker say a line |
--
+| - | - 
 | : | Used to make an already existing speaker say a line |
 
 
