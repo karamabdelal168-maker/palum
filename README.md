@@ -52,7 +52,7 @@ To make a line you have to write it after the ; or : and end it with a \\
 ```
 mark;hi I am mark\
 
-mark:I am happy to meet you
+mark:I am happy to meet you\
 ```
 
 the transpiler also ignores new lines and tabs
