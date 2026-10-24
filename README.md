@@ -60,9 +60,9 @@ the transpiler also ignores new lines and tabs
 ## Using the escape character
 
 The escape character in Palum is @ and these are how you can use it
-
-| @@ | Prints the character @ |
+|||
 | - | - |
+| @@ | Prints the character @ |
 | @; | Prints the character ; |
 | @: | Prints the character ; |
 | @\\ | Prints the character \\ |
@@ -76,16 +76,16 @@ To use it first you have to go the terminal and type palum in it. It will ask fo
 
 then in godot when you want to start the dialogue you will need to run name\_of\_txt\_file.init() if you have images for the speaker and there will be a parameter for each speaker that needs an image(you can skip this if you don’t have images for the speakers
 
-```
+```gdscript
 dialogue.init(load(“path to image”))
 
 #this example is for a mark example in Making a new line
 ```
 
 then you need to call name\_of\_txt\_file.play\_dialogue() and it has 6 parameters and the first 2 are mandatory.
-
-| 1st  parameter(tree) | The tree of the ui elements, usually it get\_tree() or line\_label.get\_tree()  |
+|||
 | - | - |
+| 1st  parameter(tree) | The tree of the ui elements, usually it get\_tree() or line\_label.get\_tree()  |
 | 2nd  parameter(line\_label) | The rich text label that will display the lines |
 | 3rd  parameter(speaker\_label) | The rich text label that will display the speaker’s name and by default it is set to null |
 | 4th  parameter(speaker\_image) | The texture rect that will display the speaker’s image and by default it is set to null |
@@ -95,7 +95,7 @@ then you need to call name\_of\_txt\_file.play\_dialogue() and it has 6 paramete
 
 For example
 
-```
+```gdscript
 dialogue.init(load(“path to image”))
 
 dialogue.play_dialogue(get_tree(),line_label,null
