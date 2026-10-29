@@ -60,7 +60,15 @@ the transpiler also ignores new lines and tabs
 
 ## Using the escape character
 
-The escape character in Palum is @ and these are how you can use it ||| | - | - | | @@ | Prints the character @ | | @; | Prints the character ; | | @: | Prints the character ; | | @\\ | Prints the character \\ | | @n | Adds a new line | | @t | Adds a tab |
+The escape character in Palum is @ and these are how you can use it. 
+| | |
+| - | - |
+| @@ | Prints the character @ |
+| @; | Prints the character ; |
+| @: | Prints the character ; |
+| @\\ | Prints the character \\ |
+| @n | Adds a new line |
+| @t | Adds a tab |
 
 ## Using palum in godot
 
