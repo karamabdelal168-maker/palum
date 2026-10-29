@@ -68,7 +68,7 @@ To use it first you have to go the terminal and type palum in it. It will ask fo
 
 then in godot when you want to start the dialogue you will need to run name\_of\_txt\_file.init() if you have images for the speaker and there will be a parameter for each speaker that needs an image(you can skip this if you don’t have images for the speakers
 
-```
+```gdscript
 dialogue.init(load(“path to image”))
 
 #this example is for a mark example in Making a new line
@@ -78,7 +78,7 @@ then you need to call name\_of\_txt\_file.play\_dialogue() and it has 6 paramete
 
 For example
 
-```
+```gdscript
 dialogue.init(load(“path to image”))
 
 dialogue.play_dialogue(get_tree(),line_label,null
@@ -90,7 +90,7 @@ speaker_image,”ui_accept”,1.5)
 
 So lets say you want something to happen after the dialogue finishes, you would use the finished signal to do that like this
 
-```
+```gdscript
 dialogue.play_dialogue(get_tree(),line_label,null
 
 speaker_image,”ui_accept”,1.5).finished.connect(function)
