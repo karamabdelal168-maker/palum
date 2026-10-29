@@ -82,7 +82,15 @@ dialogue.init(load(“path to image”))
 #this example is for a mark example in Making a new line
 ```
 
-then you need to call name\_of\_txt\_file.play\_dialogue() and it has 6 parameters and the first 2 are mandatory. ||| | - | - | | 1st  parameter(tree) | The tree of the ui elements, usually it get\_tree() or line\_label.get\_tree()  | | 2nd  parameter(line\_label) | The rich text label that will display the lines | | 3rd  parameter(speaker\_label) | The rich text label that will display the speaker’s name and by default it is set to null | | 4th  parameter(speaker\_image) | The texture rect that will display the speaker’s image and by default it is set to null | | 5th  parameter(input\_func) | The input action that will move on the next line and by default it is set to “ui\_accept” | | 6th  parameter(speed) | The speed of how fast the characters gradually appear and by defualt it is set to 1.0 |
+then you need to call name\_of\_txt\_file.play\_dialogue() and it has 6 parameters and the first 2 are mandatory.
+|||
+| - | - |
+| 1st  parameter(tree) | The tree of the ui elements, usually it get\_tree() or line\_label.get\_tree()  |
+| 2nd  parameter(line\_label) | The rich text label that will display the lines |
+| 3rd  parameter(speaker\_label) | The rich text label that will display the speaker’s name and by default it is set to null |
+| 4th  parameter(speaker\_image) | The texture rect that will display the speaker’s image and by default it is set to null |
+| 5th  parameter(input\_func) | The input action that will move on the next line and by default it is set to “ui\_accept” |
+| 6th  parameter(speed) | The speed of how fast the characters gradually appear and by defualt it is set to 1.0 |
 
 For example
 
