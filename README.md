@@ -31,7 +31,8 @@ mark;
 
 mark:
 ```
-|||
+
+|  |  |
 | - | - |
 | ; | Used to make a new speaker and make the speaker say a line |
 | : | Used to make an already existing speaker say a line |
@@ -59,16 +60,7 @@ the transpiler also ignores new lines and tabs
 
 ## Using the escape character
 
-The escape character in Palum is @ and these are how you can use it
-|||
-| - | - |
-| @@ | Prints the character @ |
-| @; | Prints the character ; |
-| @: | Prints the character ; |
-| @\\ | Prints the character \\ |
-| @n | Adds a new line |
-| @t | Adds a tab |
-
+The escape character in Palum is @ and these are how you can use it ||| | - | - | | @@ | Prints the character @ | | @; | Prints the character ; | | @: | Prints the character ; | | @\\ | Prints the character \\ | | @n | Adds a new line | | @t | Adds a tab |
 
 ## Using palum in godot
 
@@ -76,26 +68,17 @@ To use it first you have to go the terminal and type palum in it. It will ask fo
 
 then in godot when you want to start the dialogue you will need to run name\_of\_txt\_file.init() if you have images for the speaker and there will be a parameter for each speaker that needs an image(you can skip this if you don’t have images for the speakers
 
-```gdscript
+```
 dialogue.init(load(“path to image”))
 
 #this example is for a mark example in Making a new line
 ```
 
-then you need to call name\_of\_txt\_file.play\_dialogue() and it has 6 parameters and the first 2 are mandatory.
-|||
-| - | - |
-| 1st  parameter(tree) | The tree of the ui elements, usually it get\_tree() or line\_label.get\_tree()  |
-| 2nd  parameter(line\_label) | The rich text label that will display the lines |
-| 3rd  parameter(speaker\_label) | The rich text label that will display the speaker’s name and by default it is set to null |
-| 4th  parameter(speaker\_image) | The texture rect that will display the speaker’s image and by default it is set to null |
-| 5th  parameter(input\_func) | The input action that will move on the next line and by default it is set to “ui\_accept” |
-| 6th  parameter(speed) | The speed of how fast the characters gradually appear and by defualt it is set to 1.0 |
-
+then you need to call name\_of\_txt\_file.play\_dialogue() and it has 6 parameters and the first 2 are mandatory. ||| | - | - | | 1st  parameter(tree) | The tree of the ui elements, usually it get\_tree() or line\_label.get\_tree()  | | 2nd  parameter(line\_label) | The rich text label that will display the lines | | 3rd  parameter(speaker\_label) | The rich text label that will display the speaker’s name and by default it is set to null | | 4th  parameter(speaker\_image) | The texture rect that will display the speaker’s image and by default it is set to null | | 5th  parameter(input\_func) | The input action that will move on the next line and by default it is set to “ui\_accept” | | 6th  parameter(speed) | The speed of how fast the characters gradually appear and by defualt it is set to 1.0 |
 
 For example
 
-```gdscript
+```
 dialogue.init(load(“path to image”))
 
 dialogue.play_dialogue(get_tree(),line_label,null
@@ -103,6 +86,17 @@ dialogue.play_dialogue(get_tree(),line_label,null
 speaker_image,”ui_accept”,1.5)
 ```
 
+## The finished signal
+
+So lets say you want something to happen after the dialogue finishes, you would use the finished signal to do that like this
+
+```
+dialogue.play_dialogue(get_tree(),line_label,null
+
+speaker_image,”ui_accept”,1.5).finished.connect(function)
+```
+
 and a final note is that palum automatically show()s and hide()s the ui elements for you.
 
-That’s all for this README. Have fun making dialogue. 
+That’s all for this README. Have fun making dialogue.
+
