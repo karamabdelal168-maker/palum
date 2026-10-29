@@ -104,7 +104,7 @@ speaker_image,”ui_accept”,1.5)
 
 ## The finished signal
 
-So lets say you want something to happen after the dialogue finishes, you would use the finished signal to do that like this
+the finished signal is a signal that emits when the dialogue is finished, you would use the finished signal like this
 
 ```gdscript
 dialogue.play_dialogue(get_tree(),line_label,null
