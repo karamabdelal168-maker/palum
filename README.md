@@ -1,6 +1,6 @@
 # Palum
 
-Hi, Palum is a transpiler that turns txt files of dialogue into an executable gdscript file that runs the previously mentioned dialogue. I made this to solve 2 problems I had, first of all, me and my team wanted to make games but we quickly realised that it would take us a lot of time to make every system everytime we started a new game would take a lot of time, so we decided to make some systems/tools that would make it faster and easier to make our games and one of the things we needed to take care of is dialogue in our games. Second of all, I have been learning c++ and I wanted to start making projects with c++ to gain experience with the langauge and I decided to hit 2 birds with one stone, with the stone being Palum.
+Hi, Palum is a transpiler that turns txt files of dialogue into an executable gdscript file that runs the previously mentioned dialogue. I made this to solve 2 problems I had, first of all, I wanted to make games but I quickly realised that it would take us a lot of time to make every system everytime I started a new game would take a lot of time, so I decided to make some systems/tools that would make it faster and easier to make our games and one of the things I needed to take care of is dialogue in our games. Second of all, I have been learning c++ and I wanted to start making projects with c++ to gain experience with the langauge and I decided to hit 2 birds with one stone, with the stone being Palum.
 
 # For who is palum for
 
